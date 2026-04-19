@@ -20,36 +20,47 @@ Chatty is an intelligent, context-aware college AI assistant built to streamline
 ## 📦 Installation
 
 1. **Clone the repository:**
-   ```bash
+     ```bash
    git clone [https://github.com/OmkarAtpale9/chatty-ai-assistant.git](https://github.com/OmkarAtpale9/chatty-ai-assistant.git)
    cd chatty-ai-assistant
 
-2. Set up a virtual environment (Recommended):
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. **Set up a virtual environment (Recommended):**
+     ```bash
+      python -m venv venv
+      source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-3. Install dependencies:
-   pip install -r requirements.txt
+3. **Install dependencies:**
+     ```bash
+      pip install -r requirements.txt
 
-4. Environment Variables:
-   Create a .env file in the root directory and add your keys:
+4. **Environment Variables:**
+   - **Create a .env file in the root directory and add your keys:**
+     ```bash
       GEMINI_API_KEY=your_actual_api_key_here
       MONGO_URI=mongodb://localhost:27017/
    
-5. Run the Application:
-      Frontend: npm run dev
-      Backend:  uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+5. **Run the Application:**
+   - **Frontend:**
+     ```bash
+     npm run dev
+   - **Backend:**
+     ```bash
+     uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 
-🔌 API Endpoints
-      GET /: Health check.
-      GET /train: Triggers the embedding training process for the database.
-      POST /ask: Send a question (JSON body: {"question": "your text here"}) to get an AI-generated answer.
 
-🤝 Contributing
-    "This project is for academic/personal portfolio purposes, but I welcome feedback and suggestions for improvement!"
+## 🔌 **API Endpoints**
+      - GET /: Health check.
+      - GET /train: Triggers the embedding training process for the database.
+      - POST /ask: Send a question (JSON body: {"question": "your text here"}) to get an AI-generated answer.
 
-👤 Author
-    Omkar Atpale | Computer Applications Student | Developer | [https://www.linkedin.com/in/omkar-atpale/] | [Omkar Atpale]
+## 🤝 Contributing
+
+- **"This project is for academic or personal portfolio purposes, but I welcome feedback and suggestions for improvement!"**
+
+
+## 👤 Author
+
+- **Omkar Atpale | Computer Applications Student | Developer | [https://www.linkedin.com/in/omkar-atpale/] | [Omkar Atpale]**
 
 
     
