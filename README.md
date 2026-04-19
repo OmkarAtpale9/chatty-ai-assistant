@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🤖 Chatty AI Assistant
 
-## Getting Started
+Chatty is an intelligent, context-aware college AI assistant built to streamline information retrieval. It uses semantic search and LLM reasoning to provide accurate, helpful answers to student queries.
 
-First, run the development server:
+## 🚀 Features
+- **Semantic Search:** Uses `Sentence-Transformers` to find the most relevant information from your database.
+- **LLM Reasoning:** Integrates Google's `Gemini 2.0 Flash` to synthesize answers based on retrieved context.
+- **Fuzzy Matching:** Automatically corrects user typos using `TextBlob` for a better user experience.
+- **Auto-Training:** Automatically generates embeddings for new college data on application startup.
+- **Robust Backend:** Built with `FastAPI` for high-performance and asynchronous request handling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
+- **Frontend:** Next.js
+- **Backend:** Python [FastAPI]
+- **AI/ML:** Google Gemini API (Generative AI), Sentence-Transformers
+- **Database:** MongoDB
+- **NLP:** TextBlob (Spell correction)
+- **Environment:** dotenv (for secure config management)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/OmkarAtpale9/chatty-ai-assistant.git](https://github.com/OmkarAtpale9/chatty-ai-assistant.git)
+   cd chatty-ai-assistant
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Set up a virtual environment (Recommended):
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-## Learn More
+3. Install dependencies:
+   pip install -r requirements.txt
 
-To learn more about Next.js, take a look at the following resources:
+4. Environment Variables:
+   Create a .env file in the root directory and add your keys:
+      GEMINI_API_KEY=your_actual_api_key_here
+      MONGO_URI=mongodb://localhost:27017/
+   
+5. Run the Application:
+      Frontend: npm run dev
+      Backend:  uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔌 API Endpoints
+      GET /: Health check.
+      GET /train: Triggers the embedding training process for the database.
+      POST /ask: Send a question (JSON body: {"question": "your text here"}) to get an AI-generated answer.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🤝 Contributing
+    "This project is for academic/personal portfolio purposes, but I welcome feedback and suggestions for improvement!"
 
-## Deploy on Vercel
+👤 Author
+    Omkar Atpale | Computer Applications Student | Developer | [https://www.linkedin.com/in/omkar-atpale/] | [Omkar Atpale]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    
